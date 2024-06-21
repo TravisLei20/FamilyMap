@@ -1,0 +1,49 @@
+drop table if exists users;
+drop table if exists persons;
+drop table if exists events;
+drop table if exists authToken;
+
+
+CREATE TABLE users
+(
+	username varchar(255) not null primary key,
+	password varchar(255) not null,
+	email varchar(255) not null,
+	firstName varchar(255) not null,
+	lastName varchar(255) not null,
+	gender varchar(1) not null,
+	personID varchar(255) not null
+);
+
+CREATE TABLE persons
+(
+	firstName varchar(255) not null,
+	lastName varchar(255) not null,
+	gender varchar(1) not null,
+	personID varchar(255) not null primary key,
+	spouseID varchar(255), --//Can be null
+	fatherID varchar(255), --//Can be null
+	motherID varchar(255), --//Can be null
+	associatedUsername varchar(255) not null
+);
+
+CREATE TABLE events
+(
+	eventType varchar(255) not null,
+	personID varchar(255) not null,
+	city varchar(255) not null,
+	country varchar(255) not null,
+	latitude float not null,
+	longitude float not null,
+	year integer not null,
+	eventID varchar(255) not null primary key,
+	associatedUsername varchar(255) not null
+);
+
+CREATE TABLE authToken
+(
+	authToken varchar(255) not null, --UUID
+	username varchar(255) not null primary key
+);
+
+-- Use DB browser to confirm these tables

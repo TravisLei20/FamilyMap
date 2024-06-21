@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.games:games-activity:1.0.0-rc01@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2cf26f9f1ad870e4c890538fcf9e66a7/transformed/games-activity-1.0.0-rc01/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5d1cf3c130f12adba6d205cc0d2c5e7a/transformed/games-activity-1.0.0-rc01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d1cf3c130f12adba6d205cc0d2c5e7a/transformed/games-activity-1.0.0-rc01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d1cf3c130f12adba6d205cc0d2c5e7a/transformed/games-activity-1.0.0-rc01/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

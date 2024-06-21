@@ -1,0 +1,60 @@
+{
+  "users":
+  [
+    {
+      "userName": "Joseph123",
+      "password": "JosephRocksSeerStonesHat",
+      "email": "joseph@gmail.com",
+      "firstName": "Joseph",
+      "lastName": "Smith",
+      "gender": "m",
+      "personID": "jkl-95-df-9856"
+    },
+    {
+      "userName": "Brigham123",
+      "password": "LifeOnMoon",
+      "email": "brigham@gmail.com",
+      "firstName": "Brigham",
+      "lastName": "Young",
+      "gender": "m",
+      "personID": "jkp-58-df-6856"
+    }
+  ],
+  "persons":
+  [
+    {
+      "firstName": "Joseph",
+      "lastName": "Smith",
+      "gender": "m",
+      "personID": "jkl-95-df-dfd56",
+      "spouseID": "emma+",
+      "fatherID": "alsoJoseph",
+      "motherID": "mother",
+      "associatedUsername": "Joseph123"
+    },
+    {
+      "firstName": "Jo",
+      "lastName": "Biden",
+      "gender": "m",
+      "personID": "where_am_I?",
+      "spouseID": "seemsNice",
+      "fatherID": "whoknows?",
+      "motherID": "alsomother",
+      "associatedUsername": "6 million will die by the time i finish this sentence."
+    }
+  ],
+  "events":
+  [
+    {
+      "eventType": "downfall",
+      "personID": "where_am_I?",
+      "city": "babylon",
+      "country": "hell",
+      "latitude": 79.9833,
+      "longitude": -84.0667,
+      "year": 2650,
+      "eventID": "kfdjka=dfad-dfad9",
+      "associatedUsername": "Ill circle back to that"
+    }
+  ]
+}

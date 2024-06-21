@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/travi/Desktop/FamilyMapServerStudent-master/FamilyMapServerStudent/ownfamilymap.sqlite" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2775"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainPersons"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="AuthToken" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="101"/><column index="2" value="96"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Events" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="99"/><column index="2" value="90"/><column index="3" value="52"/><column index="4" value="76"/><column index="5" value="76"/><column index="6" value="92"/><column index="7" value="52"/><column index="8" value="79"/><column index="9" value="187"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Persons" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="94"/><column index="2" value="90"/><column index="3" value="70"/><column index="4" value="90"/><column index="5" value="92"/><column index="6" value="83"/><column index="7" value="93"/><column index="8" value="187"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Users" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="94"/><column index="2" value="93"/><column index="3" value="56"/><column index="4" value="94"/><column index="5" value="90"/><column index="6" value="70"/><column index="7" value="90"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">drop table if exists users;
+drop table if exists persons;
+drop table if exists events;
+drop table if exists authToken;
+drop table if exists Users;
+drop table if exists Persons;
+drop table if exists Events;
+drop table if exists AuthToken;
+
+CREATE TABLE Users
+(
+	username varchar(255) not null primary key, --unique contraint
+	password varchar(255) not null,
+	email varchar(255) not null,
+	firstName varchar(255) not null,
+	lastName varchar(255) not null,
+	gender varchar(1) not null,
+	personID varchar(255) not null --May be primary with UUID
+);
+
+CREATE TABLE Persons
+(
+	firstName varchar(255) not null,
+	lastName varchar(255) not null,
+	gender varchar(1) not null,
+	personID varchar(255) not null primary key, --May be primary with UUID ,, unique contraint
+	spouseID varchar(255), --//Can be null
+	fatherID varchar(255), --//Can be null
+	motherID varchar(255), --//Can be null
+	associatedUsername varchar(255) not null
+);
+
+CREATE TABLE Events
+(
+	eventType varchar(255) not null,
+	personID varchar(255) not null,
+	city varchar(255) not null,
+	country varchar(255) not null,
+	latitude float not null, --//check if float
+	longitude float not null,
+	year integer not null,
+	eventID varchar(255) not null primary key, --May be primary with UUID ,, unqiue contraint
+	associatedUsername varchar(255) not null
+);
+
+CREATE TABLE AuthToken
+(
+	authToken varchar(255) not null primary key, --UUID
+	userName varchar(255) not null
+);
+
+-- Use DB browser to confirm these tables</sql><current_tab id="0"/></tab_sql></sqlb_project>
